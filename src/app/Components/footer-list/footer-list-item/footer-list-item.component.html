@@ -1,0 +1,53 @@
+<form [formGroup]="react.formAudio">
+  
+  <div  style="width: 100%;height: auto;background-color: #EB5757;display: block;display: flex;flex-wrap: wrap;justify-content: space-between;">
+    <div class="form-inline" style="display: flex;flex-wrap: wrap;justify-content: flex-start;">
+      <img src="{{linkImage}}" alt="logo">
+      <div style="margin: 12px 10px;">
+        <p class="title-art">{{artistTitle | slice:0:15}}</p>
+        <p class="title-album">{{albumTitle | slice:0:15}}</p>
+      </div>
+    </div>
+    <div style="width: 60%;display: flex;flex-wrap: wrap;justify-content: center;">
+        <div style="display: flex;flex-wrap: wrap;justify-content: space-between;margin: 15px 0; text-align: center;"> 
+          <i class="fa fa-step-backward back-btn" aria-hidden="true" (click)="back()"></i>
+          <i *ngIf="!flagPlay" class="fa fa-play-circle play-btn" (click)="play(linkMusic)" aria-hidden="true"></i>
+          <i *ngIf="flagPlay" class="far fa-pause-circle play-btn" (click)="pause(linkMusic)" aria-hidden="true"></i>
+          <i class="fa fa-step-forward next-btn" aria-hidden="true" (click)="next()"></i>
+        </div>
+    </div>
+    <div style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
+      <div class="container-flaticon-center">
+        <mat-slider class="min"  min="0" max="1" [step]="0.1" formControlName="controlAudio" style="color: #ffffff;margin-top: 12.5px;margin-right: 5px;" (input)="controlVolume($event)"></mat-slider>
+        <i *ngIf="!flagAudio" class="fa fa-volume-up container-flaticon-center" aria-hidden="true" (click)="handleAudioEnabled()" style="font-family: Font Awesome 5 Free;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 41px;
+        margin-top: 11.5px;
+        margin-right: 10px;
+        cursor: pointer;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;"></i>
+        <i *ngIf="flagAudio" class="fa fa-volume-off container-flaticon-center" aria-hidden="true" (click)="handleAudioEnabled()" style="font-family: Font Awesome 5 Free;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 41px;
+        margin-top: 11.5px;
+        margin-right: 10px;
+        cursor: pointer;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;"></i>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- reponsive footer other order-->
+    
+</form>

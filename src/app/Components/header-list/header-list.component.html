@@ -1,0 +1,55 @@
+<div style="width: 100%;display: flex;flex-wrap: wrap;justify-content: center;">
+    <div style="display: flex;flex-wrap: wrap;justify-content: flex-start;margin-left: -10px;">
+        <img src="../../../assets/images/foxbel-music.png" alt="logo">
+    <i class="fas fa-bars btn bars-menu" (click)="changeFlagShow()"></i>
+    </div>
+    <div class="container-user-profile" style="display: flex;flex-wrap: wrap;justify-content: space-between;margin-left: 10px;">
+        <div style="display: flex;flex-wrap: wrap;justify-content: flex-end;margin-top: 20px;color: #ffffff;">
+            <i class="font-awesome fas fa-user"></i>
+            <p class="text-username">Francisco M</p>
+        </div>
+    </div>
+    <div class="sidebar-container" [ngClass]="flagShow ? 'show-sidebar' : 'hide-sidebar'" style="flex-wrap: wrap;justify-content: flex-start;">
+        <div id="section-library" class="form-group" style="margin-left: 10px;">
+            <p class="main-title">Mi Librería</p>
+            <ul style="padding: 0px 20px;">
+                <li>
+                    Recientes
+                </li>
+                <li>
+                    Artistas
+                </li>
+                <li>
+                    Álbums
+                </li>
+                <li>
+                    Canciones
+                </li>
+                <li>
+                    Estaciones
+                </li>
+            </ul>
+        </div>
+        <div id="section-playList" class="form-group" style="margin-left: 10px;">
+            <p class="main-title">Playlist</p>
+            <ul style="padding: 0px 20px;">
+                <li>
+                    Metal
+                </li>
+                <li>
+                    Para Bailar
+                </li>
+                <li>
+                    Rock 90s
+                </li>
+                <li>
+                    Baladas
+                </li>
+                <li>
+                    Estaciones
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

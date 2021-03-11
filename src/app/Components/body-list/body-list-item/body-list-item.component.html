@@ -1,0 +1,75 @@
+<form [formGroup]="react.bodyListform" >
+    <div style="width: 90%;margin-left: auto;margin-right: auto;">
+        <div style="display: flex;justify-content: space-between;margin-top: 40px;">
+            <div class="container-input-search">
+                <input type="text" placeholder="Buscar" formControlName="search" class="input-search" style="width: 100%;" (change)="searchDataByParameter($event)" />
+                <i class=" fas fa-search flat-icon-search" (click)="searchDataByParameter($event)"></i>
+            </div>
+            <div class="container-user-profile">
+                    <i class="font-awesome fas fa-user"><p class="text-username">Francisco M</p></i>
+            </div>
+        </div> 
+    
+        <div class="mt-10" style="margin: 40px 0px;">
+        <div *ngIf="flagFound" style="padding: 0;margin: 0;display: flex;flex-wrap: wrap; width: 100%;z-index: 1;">
+            <div class="container-imagen" style="position: relative;">
+                <img src='{{imgArt}}' width="100%" >
+                <i class="btn fa fa-play position-play" (click)="showMessagePadre(responseSearchCollections[1].album.cover_small
+                ,responseSearchCollections[1].preview,nameArt,nameAlbum,true)"></i>
+                
+            </div>
+            <div class="container-description-art" style="display: flex;flex-wrap: wrap;
+            background: linear-gradient(0deg, rgba(167, 0, 0, 0.8), rgba(167, 0, 0, 0.8)),url('{{imgBackGround}}');
+            background-size: cover;
+            background-repeat: no-repeat;">
+                <div style="margin-top: 20px;margin-left: 30px;padding: 0;">
+                <section>
+                <p class="title-description-art m-0" style="color: #FFFFFF;">{{nameArt}}</p>
+                <p class="m-0 title-fans" style="color: #ffffff">{{subDescription}}  <strong style="color: #000000;margin: 0 15px;">{{rank}} seguidores</strong></p>
+                </section>
+                <p id="description" class="text-description-music">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illo ex nisi, 
+                    quas illum animi veniam tempora quasi eos provident 
+                    impedit neque cupiditate in facilis velit veritatis molestias odit beatae?
+                </p>
+                <div style="display: flex;flex-wrap: wrap;justify-content: left;">
+                    <button class="btn btn-play" (click)="showMessagePadre(responseSearchCollections[1].album.cover_small
+                    ,responseSearchCollections[1].preview,nameArt,nameAlbum,true)">Reproducir</button>
+                    <button class="btn btn-follow">Seguir</button>
+                    <a href="#" class="btn btn-link btn-link-show">...</a>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+
+        <div  style="margin: 30px auto;">
+            <h2 class="title-result"> Resultados </h2>
+            <p *ngIf="!flagFound" class="container-loading" ><strong class="animate__animated animate__bounce">Loading...</strong></p>
+            <div  class="element-list">
+                
+                <ul *ngFor="let value of responseSearchCollections" style="list-style: none;">
+                    <li>
+                        <div class="card" style="width: auto;float: left;">
+                            <div class="card-img-top container-main-imagen">
+                                <img class="rounded mx-auto d-block" src="{{value.album.cover_medium}}" width="100%" alt="Card image cap">
+                                <i class="btn fa fa-play sub-position-play" (click)="showMessagePadre(value.album.cover_small,value.preview,value.artist.name,value.album.title,true)"></i>
+                            </div>
+                            <div class="card-body bg-mobile-response-description" style="background-color: rgba(179, 170, 170, 0.1);">
+                                <p class="description-title-music m-0">{{value.title_short | slice:0:15}}</p>
+                                <p class="description-art m-0">{{value.artist.name | slice:0:15}}}</p>
+                            </div>
+                          </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</form>
+
+<footer class="footer-fixed" style="position: absolute;width: 100%;left: 0%;">
+    <app-footer-list-item></app-footer-list-item>
+</footer>

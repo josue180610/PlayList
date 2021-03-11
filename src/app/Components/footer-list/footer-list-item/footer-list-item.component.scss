@@ -1,0 +1,102 @@
+.footer-play-list{
+    background-color: #EB5757;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.title-art{ 
+/* 14-bold-qs */
+font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+color: #FFFFFF;
+margin: 0;
+}
+.title-album{
+/* 12-regular-qs */
+font-family: Quicksand;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height */
+color: #e2e0e0;
+margin: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul {
+    margin: 0;
+}
+.play-btn{
+    font-size: 30px;color: #ffffff;cursor: pointer;
+}
+.play-btn:hover{
+    opacity: 0.9;
+    color: #c4c2c2;
+}
+.back-btn{ 
+    font-size: 15px;margin-right: 10px;margin-top: 8px;color: #ffffff;cursor: pointer;
+}
+.back-btn:hover{ 
+    opacity: 0.9;
+    color: #c4c2c2;
+}
+.next-btn{
+    font-size: 15px;margin-left: 10px;margin-top: 8px;color: #ffffff;cursor: pointer;
+}
+.next-btn:hover{ 
+    opacity: 0.9;
+    color: #c4c2c2;
+}
+.container-flaticon-center{
+    display: flex;flex-wrap: wrap;justify-content: center;vertical-align: middle;margin-right:10px;
+}
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: blue; /*replace with your color*/
+}
+:host ::ng-deep .average .mat-slider-thumb {
+    background-color: #ff3967;
+  }
+  
+  :host ::ng-deep .min .mat-slider-thumb {
+    background-color: #ffffff;
+  }
+  
+  :host ::ng-deep .min .mat-slider-thumb-label {
+    background-color:  #ffffff;
+  }
+  
+  :host ::ng-deep .min .mat-slider-track-fill {
+    background-color:  #ffffff;
+  }
+  
+  :host ::ng-deep .max .mat-slider-thumb {
+    background-color: orange;
+  }
+  
+  :host ::ng-deep .max .mat-slider-thumb-label {
+    background-color: orange;
+  }
+  
+  :host ::ng-deep .max .mat-slider-track-fill {
+    background-color: orange;
+  }
+::ng-deep .mat-slider.mat-slider-horizontal .mat-slider-wrapper {
+    top: 18px;
+    color: #FFFFFF;
+  }
+
+@media (max-width:600px){ 
+    .title-art{
+        font-size: 0.6rem;
+    }
+}

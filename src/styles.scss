@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bars-menu {
+    position: relative;top: 9px;left: 5px;color: #ffffff;cursor: pointer;
+    display: none;
+}
+.bars-menu:hover .sidebar-container{
+        display: block;
+        transform: translateX(100%);
+        transition: all 0.8s ease-in;
+        z-index:1;
+        height: 100%;
+    
+}
+.main-title{
+
+    padding:0px 20px;
+    margin: 0;
+    /* 22-bold-white */
+    
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    }

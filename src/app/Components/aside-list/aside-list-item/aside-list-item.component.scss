@@ -1,0 +1,37 @@
+*{ 
+    list-style: none;
+}
+
+.container-img-drowp{
+    display: flex;flex-wrap: wrap;justify-content: center;width: 100%;
+}
+
+.main-title{
+
+padding:0px 20px;
+margin: 0;
+/* 22-bold-white */
+
+font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+
+ul li {
+
+/* 16-regular-white */
+
+font-family: Quicksand;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+color: #FFFFFF;
+}
